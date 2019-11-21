@@ -23,6 +23,10 @@ header nav{
     width: 450px;
     justify-content: space-around;
     margin-left: 100px;
+    overflow: hidden;
+}
+header  .icon{
+    display: none;
 }
 
 .gallery{
@@ -47,17 +51,37 @@ header nav{
 
 @media screen and (max-width: 560px){
     /* до 560 px */
+    header{
+        flex-direction: column;
+    }
     header nav{
         flex-direction: column;
+    }
+    header nav a{
+        font-size: 24px;
     }
     .gallery{
         align-items: center;
     }
     .img_wrap img{
-        height: 200px !important;
+        height: 150px !important;
         width: auto;
         box-shadow: 2px 3px 5px black;
     
+    }
+    header nav  {
+        display: none;
+        width: 80%;
+    }
+    header  .icon{
+        display: inline-block !important;
+        align-self: flex-start !important;
+        font-size: 30px;
+        color: white;
+    
+    }
+    .helper{
+        display: flex;
     }
 
 }
@@ -65,6 +89,26 @@ header nav{
 
 @media screen and (max-width: 1100px){
     /* до 560 px */
+    header{
+        flex-direction: column;
+    }
+    header nav{
+        flex-direction: column;
+    }
+    .helper{
+        display: flex;
+    }
+    header nav  {
+        display: none;
+        width: 80%;
+    }
+    header  .icon{
+        display: inline-block !important;
+        align-self: flex-start !important;
+        font-size: 30px;
+        color: white;
+    
+    }
     header{
         height: auto;
         padding: 3px;
@@ -84,7 +128,7 @@ header nav{
         width: 90%;
     }
     .img_wrap img{
-        height: 350px;
+        height: 300px;
         box-shadow: 2px 3px 5px black;
     
     }
